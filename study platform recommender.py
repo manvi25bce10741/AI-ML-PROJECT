@@ -4,7 +4,6 @@ def recommend_platform(subject, goal, preference, time):
     goal = goal.lower()
     preference = preference.lower()
     time = time.lower()
-
     # Initialize scores
     scores = {
         "YouTube": 0,
@@ -12,7 +11,6 @@ def recommend_platform(subject, goal, preference, time):
         "LeetCode": 0,
         "Coursera": 0
     }
-
     # SUBJECT BASED SCORING
     if subject == "dsa":
         scores["LeetCode"] += 3
@@ -23,7 +21,6 @@ def recommend_platform(subject, goal, preference, time):
     elif subject == "programming":
         scores["YouTube"] += 2
         scores["LeetCode"] += 2
-
     # GOAL BASED SCORING
     if goal == "practice":
         scores["LeetCode"] += 3
@@ -32,7 +29,6 @@ def recommend_platform(subject, goal, preference, time):
         scores["Coursera"] += 2
     elif goal == "revision":
         scores["YouTube"] += 3
-
     # PREFERENCE BASED SCORING
     if preference == "video":
         scores["YouTube"] += 3
@@ -41,16 +37,13 @@ def recommend_platform(subject, goal, preference, time):
         scores["GeeksforGeeks"] += 3
     elif preference == "coding":
         scores["LeetCode"] += 3
-
     # TIME BASED SCORING
     if time == "short":
         scores["YouTube"] += 2
     elif time == "long":
         scores["Coursera"] += 3
-
     # SORT PLATFORMS BY SCORE (descending)
     sorted_platforms = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-
     # TOP 2
     top_two = sorted_platforms[:2]
 
@@ -67,11 +60,11 @@ def main():
 
     top_two, scores = recommend_platform(subject, goal, preference, time)
 
-    print("\n📊 Score Breakdown:")
+    print("\n Score Breakdown:")
     for platform, score in scores.items():
         print(f"{platform}: {score}")
 
-    print("\n🏆 Top Recommendations:")
+    print("\n Top Recommendations:")
     print(f"1. {top_two[0][0]} (Score: {top_two[0][1]})")
     print(f"2. {top_two[1][0]} (Score: {top_two[1][1]})")
 
