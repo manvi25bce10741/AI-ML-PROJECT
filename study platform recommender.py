@@ -1,0 +1,80 @@
+def recommend_platform(subject, goal, preference, time):
+
+    subject = subject.lower()
+    goal = goal.lower()
+    preference = preference.lower()
+    time = time.lower()
+
+    # Initialize scores
+    scores = {
+        "YouTube": 0,
+        "GeeksforGeeks": 0,
+        "LeetCode": 0,
+        "Coursera": 0
+    }
+
+    # SUBJECT BASED SCORING
+    if subject == "dsa":
+        scores["LeetCode"] += 3
+        scores["GeeksforGeeks"] += 2
+    elif subject in ["dbms", "os", "cn"]:
+        scores["GeeksforGeeks"] += 3
+        scores["YouTube"] += 2
+    elif subject == "programming":
+        scores["YouTube"] += 2
+        scores["LeetCode"] += 2
+
+    # GOAL BASED SCORING
+    if goal == "practice":
+        scores["LeetCode"] += 3
+    elif goal == "concept":
+        scores["YouTube"] += 2
+        scores["Coursera"] += 2
+    elif goal == "revision":
+        scores["YouTube"] += 3
+
+    # PREFERENCE BASED SCORING
+    if preference == "video":
+        scores["YouTube"] += 3
+        scores["Coursera"] += 2
+    elif preference == "notes":
+        scores["GeeksforGeeks"] += 3
+    elif preference == "coding":
+        scores["LeetCode"] += 3
+
+    # TIME BASED SCORING
+    if time == "short":
+        scores["YouTube"] += 2
+    elif time == "long":
+        scores["Coursera"] += 3
+
+    # SORT PLATFORMS BY SCORE (descending)
+    sorted_platforms = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+    # TOP 2
+    top_two = sorted_platforms[:2]
+
+    return top_two, scores
+
+
+def main():
+    print("=== Intelligent Study Platform Recommender (AI-Based) ===\n")
+
+    subject = input("Enter subject (DSA/DBMS/OS/CN/Programming): ")
+    goal = input("Enter goal (concept/practice/revision): ")
+    preference = input("Enter preference (video/notes/coding): ")
+    time = input("Enter time available (short/medium/long): ")
+
+    top_two, scores = recommend_platform(subject, goal, preference, time)
+
+    print("\n📊 Score Breakdown:")
+    for platform, score in scores.items():
+        print(f"{platform}: {score}")
+
+    print("\n🏆 Top Recommendations:")
+    print(f"1. {top_two[0][0]} (Score: {top_two[0][1]})")
+    print(f"2. {top_two[1][0]} (Score: {top_two[1][1]})")
+
+
+if __name__ == "__main__":
+    main()
