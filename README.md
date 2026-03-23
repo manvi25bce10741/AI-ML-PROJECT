@@ -3,6 +3,9 @@ OVERVIEW:
 The Smart Study Platform Recommender System is a Python-based application designed to assist Computer Science students in selecting the most suitable platform for studying various subjects. It helps students navigate through the large number of options available to learn new concepts and skills. It aims at helping students avoid confusion when they are exposed to the huge glamorous yet scary world of computer science. The system takes user inputs such as subject, goal, learning preference, and available time, and uses a weighted scoring mechanism to recommend the top platforms.
 Unlike basic rule-based systems, this project introduces a scoring and ranking approach, making it more aligned with Artificial Intelligence concepts such as decision-making, ranking, and explainability.
 
+WHY THIS PROJECT:
+While studying, I noticed that I was spending too much time deciding where to study from instead of actually studying. Different platforms are useful for different purposes, but there is no quick way to decide which one to use.So I built this project to make that decision easier and faster.
+
 FEATURES:
 User input collection:
  Subject (DSA, DBMS, OS, CN, Programming)
