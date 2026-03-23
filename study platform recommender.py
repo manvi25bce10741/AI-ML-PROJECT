@@ -76,7 +76,7 @@ if __name__ == "__main__":
     feedback = input("\nWas this recommendation helpful? (yes/no): ").strip().lower()
 
     if feedback == "yes":
-        print("Glad it helped! 👍")
+        print("Glad it helped! ")
     elif feedback == "no":
         print("Thanks for your feedback! This can be used to improve the system.")
     else:
