@@ -72,3 +72,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Collect feedback from user
+    feedback = input("\nWas this recommendation helpful? (yes/no): ").strip().lower()
+
+    if feedback == "yes":
+        print("Glad it helped! 👍")
+    elif feedback == "no":
+        print("Thanks for your feedback! This can be used to improve the system.")
+    else:
+        print("Invalid input. Please enter yes or no next time.")
