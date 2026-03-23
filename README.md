@@ -8,14 +8,14 @@ While studying, I noticed that I was spending too much time deciding where to st
 
 FEATURES:
 User input collection:
- Subject (DSA, DBMS, OS, CN, Programming)
- Goal (Concept understanding, Practice, Revision)
- Learning preference (Video, Notes, Coding)
- Time available (Short, Medium, Long)
- Weighted scoring system for intelligent decision-making
- Ranking of platforms based on computed scores
- Top 2 platform recommendations instead of a single output
- Score breakdown for transparency and explainability
+ Subject (DSA, DBMS, OS, CN, Programming),
+ Goal (Concept understanding, Practice, Revision),
+ Learning preference (Video, Notes, Coding),
+ Time available (Short, Medium, Long),
+ Weighted scoring system for intelligent decision-making,
+ Ranking of platforms based on computed scores,
+ Top 2 platform recommendations instead of a single output,
+ Score breakdown for transparency and explainability,
  Simple and user-friendly terminal interface
 
 HOW THE PROGRAM WORKS:
@@ -23,25 +23,25 @@ Each platform is given a score based on the user’s inputs. For example, if the
 This approach is similar to a basic recommendation system where decisions are made based on weighted conditions.
  
 TECHNOLOGIES / TOOLS USED:
-Python 3
-Functions for modular programming
-Conditional statements and scoring logic
+Python 3,
+Functions for modular programming,
+Conditional statements and scoring logic,
 GitHub for version control and repository management
 
 STEPS TO INSTALL AND RUN THE PROGRAM:
-Clone the repository
-Navigate to the project folder
+Clone the repository,
+Navigate to the project folder,
 Run the program
 
 LIMITATIONS:
-The system uses fixed rules and does not learn automatically
-Recommendations are general and may not fit everyone
+The system uses fixed rules and does not learn automatically,
+Recommendations are general and may not fit everyone,
 No real-time data is used
 
 FUTURE IMPROVEMENTS:
-Add user feedback storage
-Use real data for better recommendations
-Convert into a web application
+Add user feedback storage,
+Use real data for better recommendations,
+Convert into a web application,
 Implement machine learning for personalization
 
 CONCLUSION:
