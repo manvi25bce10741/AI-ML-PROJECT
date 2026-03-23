@@ -1,3 +1,4 @@
+#function to calculate scores
 def recommend_platform(subject, goal, preference, time):
 
     subject = subject.lower()
@@ -49,7 +50,7 @@ def recommend_platform(subject, goal, preference, time):
 
     return top_two, scores
 
-#final display of recommendations
+#function for final display of recommendations
 def main():
     print("=== Intelligent Study Platform Recommender (AI-Based) ===\n")
 
