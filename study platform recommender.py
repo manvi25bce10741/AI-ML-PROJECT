@@ -11,7 +11,7 @@ def recommend_platform(subject, goal, preference, time):
         "LeetCode": 0,
         "Coursera": 0
     }
-    # SUBJECT BASED SCORING
+    #subject based scoring
     if subject == "dsa":
         scores["LeetCode"] += 3
         scores["GeeksforGeeks"] += 2
@@ -21,7 +21,7 @@ def recommend_platform(subject, goal, preference, time):
     elif subject == "programming":
         scores["YouTube"] += 2
         scores["LeetCode"] += 2
-    # GOAL BASED SCORING
+    #goal based scoring
     if goal == "practice":
         scores["LeetCode"] += 3
     elif goal == "concept":
@@ -29,7 +29,7 @@ def recommend_platform(subject, goal, preference, time):
         scores["Coursera"] += 2
     elif goal == "revision":
         scores["YouTube"] += 3
-    # PREFERENCE BASED SCORING
+    #preference based scoring
     if preference == "video":
         scores["YouTube"] += 3
         scores["Coursera"] += 2
@@ -37,19 +37,19 @@ def recommend_platform(subject, goal, preference, time):
         scores["GeeksforGeeks"] += 3
     elif preference == "coding":
         scores["LeetCode"] += 3
-    # TIME BASED SCORING
+    #time based scoring
     if time == "short":
         scores["YouTube"] += 2
     elif time == "long":
         scores["Coursera"] += 3
-    # SORT PLATFORMS BY SCORE (descending)
+    #sort platforms by score
     sorted_platforms = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-    # TOP 2
+    #top two recommendations
     top_two = sorted_platforms[:2]
 
     return top_two, scores
 
-
+#final display of recommendations
 def main():
     print("=== Intelligent Study Platform Recommender (AI-Based) ===\n")
 
