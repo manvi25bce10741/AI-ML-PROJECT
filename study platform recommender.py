@@ -72,7 +72,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # Collect feedback from user
+    #to collect feedback from user
     feedback = input("\nWas this recommendation helpful? (yes/no): ").strip().lower()
 
     if feedback == "yes":
